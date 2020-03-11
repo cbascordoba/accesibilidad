@@ -68,6 +68,7 @@ body,header,section {
   margin: 16px 0 8px;
   padding:8px;
   text-decoration: none;
+  outline: 3px solid var(--verde);
 }
 .header {
   color: var(--blanco);
@@ -126,6 +127,14 @@ nav{
 .nav-item:hover {
   background-color: var(--verde);
 }
+.nav-item:focus-within{
+  background-color: var(--verde);
+}
+
+.nav-item a:focus{
+  outline: none;
+  color: var(--gris-oscuro);
+}
 
 .intro {
   margin: 24px 196px 0;
@@ -150,6 +159,14 @@ nav{
   text-decoration: none;
 
 }
+.social-media li a:focus{
+  outline: none;
+}
+.social-media li a:focus-within{
+  outline: 3px solid var(--verde);
+  padding: 8px;
+}
+
 .social-link-text{
   padding-right: 4px;
   padding-left: 4px;
@@ -162,7 +179,8 @@ nav{
 
 .window {
   overflow: hidden;
-  width: 805px;
+  width: 815px;
+  padding: 8px;
 }
 
 .project-container {
@@ -176,7 +194,13 @@ nav{
 .project-container button{
   background: none;
   border: none;
+  padding: 0;
 }
+
+.project-container button:focus-within{
+  outline: 3px solid var(--verde);
+}
+
 .project {
   border-radius: 5px;
   border: 2px solid #000;
@@ -235,8 +259,13 @@ nav{
 }
 
 input {
-  outline: none;
+
   width: 100%;
+}
+
+input:focus{
+  outline: 3px solid var(--verde);
+  padding: 8px;
 }
 
 .send-button {
